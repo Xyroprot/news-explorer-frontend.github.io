@@ -1,0 +1,31 @@
+{
+  "name": "news-explorer-frontend",
+  "version": "0.0.1",
+  "description": "Frontend of the news explorer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xyroprot/news-explorer-frontend.github.io.git"
+  },
+  "keywords": [
+    "pure-JS",
+    "ES6",
+    "HTML",
+    "CSS",
+    "Webpack"
+  ],
+  "author": "Vladimir Dyakonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xyroprot/news-explorer-frontend.github.io/issues"
+  },
+  "homepage": "https://github.com/Xyroprot/news-explorer-frontend.github.io#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
