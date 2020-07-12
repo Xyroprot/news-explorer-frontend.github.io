@@ -9,7 +9,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: path.join(__dirname, 'src', 'index.js') },
+  entry: { main: './src/pages/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
@@ -60,9 +60,22 @@ module.exports = {
       canPrint: true,
     }),
     new HtmlWebpackPlugin({
-      inject: false,
-      template: path.join(__dirname, 'src', 'index.js'),
-      filename: 'index.html',
+      inject: true,
+      template: './src/pages/index.html',
+      filename: './index.html',
+      chunks: ['home'],
+      minify: {
+        collapseWhitespace: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/user-account/user-account.html',
+      filename: './user-account.html',
+      chunks: ['account'],
+      minify: {
+        collapseWhitespace: true,
+      },
     }),
     new WebpackMd5Hash(),
   ],

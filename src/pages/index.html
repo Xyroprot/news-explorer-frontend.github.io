@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NewsExplorer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Новости по запросу">
+  <meta name="Author" content="Владимир Дьяконов">
+  <link rel="shortcut icon" href="">
+  <link rel="icon" type="image/png" href="<%=require('../images/favicon/favicon.png').default%">
+</head>
+<body>
+  <div class="root">
+    <header class="header">
+      <div class="header__layout root__section">
+        <span class="header__title">NewsExplorer</span>
+        <nav class="menu">
+          <ul>
+            <li>
+              <span class="menu__buttom menu__button_on">
+                <a href="./index.html">Главная</a>
+              </span>
+            </li>
+            <li>
+              <span class="menu__button">
+                <a href="./user-account/user-account.html">Сохраненные статьи</a>
+              </span>
+            </li>
+            <li>
+              <buttom type="buttom" class="buttom buttom_sign buttom_on">
+                <a href="#">Авторизация</a>
+              </buttom>
+            </li>
+            <li>
+              <buttom type="buttom" class="buttom buttom_sign">
+                <a href="./index.html">Грета [-></a>
+              </buttom>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="search root__section">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="comment">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <form class="search__form" name="search">
+          <span class="search__box">
+            <input class="input input_type_search" name="request" placeholder="Введите тему новости" autocomplete="off" type="text">
+          </span>
+          <button type="submit" class="buttom buttom_search">Искать</button>
+        </form>
+      </div>
+    </header>
+
+
+
+
+    <div class="places-list root__section">
+    </div>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-info__edit-button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
+      <ul class="footer__menu">
+        <li class="footer__item">
+          <a class="footer__link" href="./index.html">Главная</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+        </li>
+        <li class="footer__item">
+          <img src="<%=require('../images/github.svg').default%>" alt="gh" class="footer__link">
+          <a class="footer__link" target="_blank" href="https://github.com/Xyroprot"></a>
+        </li>
+        <li class="footer__item">
+          <img src="<%=require('../images/facebook.svg').default%>" alt="fb" class="footer__link">
+          <a class="footer__link" target="_blank" href="https://www.facebook.com/yandex.praktikum"></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
