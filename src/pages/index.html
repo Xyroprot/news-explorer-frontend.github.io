@@ -13,82 +13,214 @@
 </head>
 <body>
   <div class="root">
+
     <header class="header">
-      <div class="header__layout root__section">
-        <span class="header__title">NewsExplorer</span>
+      <div class="header__layout root__section"> <!--секция header-->
+        <span class="header__logo">NewsExplorer</span>
         <nav class="menu">
           <ul>
-            <li>
-              <span class="menu__buttom menu__button_on">
-                <a href="./index.html">Главная</a>
-              </span>
+            <li class="menu__item menu__item_on">
+              <a class="menu__button" target="_self" href="./index.html" role="button">
+                <span class="button__text">Главная</span>
+              </a>
             </li>
-            <li>
-              <span class="menu__button">
-                <a href="./user-account/user-account.html">Сохраненные статьи</a>
-              </span>
+            <li class="menu__item">
+              <a class="menu__button" target="_self" href="./user-account/user-account.html" role="button">
+                <span class="button__text">Сохраненные статьи</span>
+              </a>
             </li>
-            <li>
-              <buttom type="buttom" class="buttom buttom_sign buttom_on">
-                <a href="#">Авторизация</a>
-              </buttom>
+            <li class="menu__item menu__item_on">
+              <div class="menu__button menu__button_sign" role="button">
+                <span class="button__text">Авторизация</span>
+              </div>
             </li>
-            <li>
-              <buttom type="buttom" class="buttom buttom_sign">
-                <a href="./index.html">Грета [-></a>
-              </buttom>
+            <li class="menu__item">
+              <a class="menu__button menu__button_sign" target="_self" href="./index.html" role="button">
+                <span class="button__text">Грета [-></span>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="search root__section">
+      <div class="search root__section"> <!--секция поиска-->
         <h1 class="search__title">Что в мире творится?</h1>
         <p class="comment">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form class="search__form" name="search">
           <span class="search__box">
-            <input class="input input_type_search" name="request" placeholder="Введите тему новости" autocomplete="off" type="text">
+            <input class="input input_type_search" name="request" placeholder="Введите тему новости" type="text" maxlength="400" autocomplete="off">
           </span>
-          <button type="submit" class="buttom buttom_search">Искать</button>
+          <button class="button button_search" type="submit" >
+            <span class="button__text">Искать</span>
+          </button>
         </form>
       </div>
     </header>
-
-
-
-
-    <div class="places-list root__section">
-    </div>
-    <div class="profile root__section">
+    <div class="profile root__section"> <!--секция информации о пользователе-->
       <div class="user-info">
         <div class="user-info__photo"></div>
         <div class="user-info__data">
-          <h1 class="user-info__name"></h1>
-          <p class="user-info__job"></p>
-          <button class="button user-info__edit-button">Edit</button>
+          <div class="user-info__title">
+            <h2 class="section__title">Об авторе</h2>
+          </div>
+          <div class="user-info__about">
+            <p class="section__paragraf">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+          </div>
+          <div class="user-info__about">
+            <p class="section__paragraf">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          </div>
         </div>
-        <button class="button user-info__button">+</button>
       </div>
     </div>
 
+    <div class="places-list root__section">
+      <div class="places-list__title"> <!--выдача статей-->
+        <h2 class="section__title">Результаты поиска</h2>
+      </div>
+      <article class="place-card">
+        <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
+          <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/lenta.jpg);">
+            <button class="place-card__icon place-card__icon_bookmark"></button>
+            <span class="place-card__icon place-card__icon_info">Войдите, чтобы сохранять статьи</span>
+          </div>
+          <div class="place-card__preview">
+            <p class="place-card__date">2 августа, 2019</p>
+            <h3 class="place-card__title">Национальное достояние – парки</h3>
+            <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <p class="place-card__source">Лента.ру</p>
+          </div>
+        </a>
+      </article>
+      <article class="place-card">
+        <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
+          <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/meduza.jpg);">
+            <button class="place-card__icon place-card__icon_bookmark"></button>
+            <span class="place-card__icon place-card__icon_info">Войдите, чтобы сохранять статьи</span>
+          </div>
+          <div class="place-card__preview">
+            <p class="place-card__date">2 августа, 2019</p>
+            <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+            <p class="place-card__source">Медуза</p>
+          </div>
+        </a>
+      </article>
+      <article class="place-card">
+        <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
+          <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/ria.jpg);">
+            <button class="place-card__icon place-card__icon_bookmark"></button>
+            <span class="place-card__icon place-card__icon_info">Войдите, чтобы сохранять статьи</span>
+          </div>
+          <div class="place-card__preview">
+            <p class="place-card__date">2 августа, 2019</p>
+            <h3 class="place-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+            <p class="place-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <p class="place-card__source">Риа</p>
+          </div>
+        </a>
+      </article>
+      <div class="places-list__button button" rel="noopener" target="_self" role="button">
+        <span class="button__text">Показать ещё</span>
+      </div>
 
-    <footer class="footer">
-      <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
-      <ul class="footer__menu">
-        <li class="footer__item">
-          <a class="footer__link" href="./index.html">Главная</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
-        </li>
-        <li class="footer__item">
-          <img src="<%=require('../images/github.svg').default%>" alt="gh" class="footer__link">
-          <a class="footer__link" target="_blank" href="https://github.com/Xyroprot"></a>
-        </li>
-        <li class="footer__item">
-          <img src="<%=require('../images/facebook.svg').default%>" alt="fb" class="footer__link">
-          <a class="footer__link" target="_blank" href="https://www.facebook.com/yandex.praktikum"></a>
-        </li>
-      </ul>
+      <div class="places-list__handler"> <!--загрузка статей-->
+        <i class="circle-preloader"></i>
+      </div>
+      <div class="places-list__subtitle">
+        <p class="section__paragraf section__paragraf_response">Идет поиск новостей...</p>
+      </div>
+
+      <div class="places-list__handler"> <!--отчет об ошибке-->
+        <img src="<%=require('../images/not-found.png').default%>" alt="not-found" class="places-list__not-found">
+      </div>
+      <div class="places-list__title places-list__title_response">
+        <h2 class="section__title section__title_response">Ничего не найдено</h2>
+      </div>
+      <div class="places-list__subtitle">
+        <p class="section__paragraf section__paragraf_response">К сожалению по вашему запросу ничего не найдено.</p>
+      </div>
+    </div>
+
+    <div class="popup popup_sign-in"> <!--всплывающее окно входа (добавить модификатор _is-opened)-->
+      <div class="popup__content">
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <h3 class="popup__title">Вход</h3>
+        <form class="popup__form" name="sign-in">
+          <div class="popup__field">
+            <p class="popup__text popup__text_field-name">Email</p>
+            <input type="email" name="email" class="popup__input" placeholder="Введите почту" required>
+            <div class="error error_on">
+              <span class="popup__text popup__text_error">Неправильный формат email</span>
+            </div>
+          </div>
+          <div class="popup__field">
+            <p class="popup__text popup__text_field-name">Пароль</p>
+            <input type="text" name="password" class="popup__input" placeholder="Введите пароль" required>
+          </div>
+          <button type="submit" class="button button__popup" disabled>Войти</button>
+          <p class="popup__text">или <a class="popup__text_link" href="">Зарегистрироваться</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_sign-up"> <!--всплывающее окно регистрации (добавить модификатор _is-opened)-->
+      <div class="popup__content">
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <h3 class="popup__title">Регистрация</h3>
+        <form class="popup__form" name="sign-up">
+          <div class="popup__field">
+            <p class="popup__text popup__text_field-name">Email</p>
+            <input type="email" name="email" class="popup__input" placeholder="Введите почту" required>
+            <div class="error error_on">
+              <span class="popup__text popup__text_error">Неправильный формат email</span>
+            </div>
+          </div>
+          <div class="popup__field">
+            <p class="popup__text popup__text_field-name">Пароль</p>
+            <input type="text" name="password" class="popup__input" placeholder="Введите пароль" required>
+          </div>
+          <div class="popup__field">
+            <p class="popup__text popup__text_field-name">Имя</p>
+            <input type="text" name="login" class="popup__input" placeholder="Введите свое имя" required>
+          </div>
+          <div class="error error_on">
+            <span class="popup__text popup__text_error">Такой пользователь уже есть</span>
+          </div>
+          <button type="submit" class="button button__popup" disabled>Зарегистироваться</button>
+          <p class="popup__text">или <a class="popup__text_link" href="">Войти</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer class="footer root__section"> <!--подвал-->
+      <div class="footer__container">
+        <div class="fotter__copyright">
+          <p class="section__paragraf section__paragraf_footer">© 2020 Supersite, Powered by News API</p>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu__item menu__item_on">
+              <a class="menu__button" target="_self" href="./index.html" role="button">
+                <span class="button__text">Главная</span>
+              </a>
+            </li>
+            <li class="menu__item menu__item_on">
+              <a class="menu__button" target="_self" href="https://praktikum.yandex.ru/" role="button">
+                <span class="button__text">Яндекс.Практикум</span>
+              </a>
+            </li>
+            <li class="menu__item menu__item_on">
+              <a class="menu__icon" target="_blank" href="https://github.com/Xyroprot">
+                <img src="<%=require('../images/github.svg').default%>" alt="gh">
+              </a>
+            </li>
+            <li class="menu__item menu__item_on">
+              <a class="menu__icon" target="_blank" href="https://www.facebook.com/yandex.praktikum">
+                <img src="<%=require('../images/facebook.svg').default%>" alt="fb">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   </div>
 </body>
