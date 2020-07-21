@@ -1,0 +1,26 @@
+@import url(./__section/root__section.css);
+
+.root {
+  /*background-color: black;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  font-family: 'Inter';
+  padding-bottom: 194px;
+
+@media screen and (max-width: 1024px) {
+  .root {
+    padding-bottom: 140px;
+  }
+}
+*/
+

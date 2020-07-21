@@ -1,0 +1,12 @@
+@import url(./_on/menu__item_on.css);
+@import url(./_sign/menu__item_sign.css);
+
+.menu__item {
+  margin-right: 0px;
+  display: none;
+}
+
+.menu__item:first-of-type, .menu__item:nth-child(2) {
+  margin-right: 32px;
+}
+

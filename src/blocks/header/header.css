@@ -1,0 +1,20 @@
+@import url('./__box/header__box.css');
+@import url('./__layout/header__layout.css');
+@import url('./__logo/header__logo.css');
+
+.header {
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url('../../images/main.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*
+
+  display: flex;
+  align-items: center;
+*/

@@ -1,48 +1,29 @@
 @font-face {
-  font-family: 'Robotobold';
-  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300 400 500 700 900;
   font-style: normal;
-  src: url('./fonts/roboto-bold-webfont.woff2') format('woff2'),
-       url('./fonts/roboto-bold-webfont.woff') format('woff');
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 }
 
 @font-face {
-  font-family: 'Robotomedium';
-  font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300 400;
   font-style: normal;
-  src: url('./fonts/roboto-medium-webfont.woff2') format('woff2'),
-       url('./fonts/roboto-medium-webfont.woff') format('woff');
+  src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
 }
 
 @font-face {
-  font-family: 'Robotoregular';
-  font-weight: normal;
-  font-style: normal;
-  src: url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
-       url('./fonts/roboto-regular-webfont.woff') format('woff');
-
-}
-
-@font-face {
-  font-family: 'Roboto_slab';
+  font-family: 'Roboto Slab';
   font-weight: normal;
   font-style: normal;
   src: url('./fonts/robotoslab-variablefont_wght-webfont.woff2') format('woff2-variations'),
        url('./fonts/robotoslab-variablefont_wght-webfont.woff2') format('woff2'),
        url('./fonts/robotoslab-variablefont_wght-webfont.woff') format('woff-variations'),
-       url('./fonts/robotoslab-variablefont_wght-webfont.woff2') format('woff');
+       url('./fonts/robotoslab-variablefont_wght-webfont.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Source_sans_proregular';
-  font-weight: normal;
-  font-style: normal;
-  src: url('./fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
-       url('./fonts/sourcesanspro-regular-webfont.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style:  normal;
   font-weight: 400;
   font-display: swap;

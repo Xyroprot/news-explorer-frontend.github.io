@@ -14,37 +14,40 @@
 <body>
   <div class="root">
 
-    <header class="header root__section"> <!--header-->
-      <div class="header__layout"> <!--секция элекментов навигации в заголовке страницы-->
-        <span class="header__logo">NewsExplorer</span>
-        <nav class="menu">
-          <ul>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button" target="_self" href="./index.html" role="button">
-                <span class="button__text">Главная</span>
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__button" target="_self" href="#" role="button">
-                <span class="button__text">Сохраненные статьи</span>
-              </a>
-            </li>
-            <li class="menu__item menu__item_on">
-              <div class="menu__button menu__button_sign" role="button">
-                <span class="button__text">Авторизация</span>
-              </div>
-            </li>
-            <li class="menu__item">
-              <a class="menu__button menu__button_sign" target="_self" href="./index.html" role="button">
-                <span class="button__text">Грета [-></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <header class="header"> <!--header-->
+      <div class="header__box">
+        <div class="header__layout root__section"> <!--секция элекментов навигации в заголовке страницы-->
+          <span class="header__logo">NewsExplorer</span>
+          <nav class="menu">
+            <ul class="menu__layout">
+              <li class="menu__item menu__item_on">
+                <a class="menu__button" target="_self" href="./index.html" role="button">
+                  <span class="button__text">Главная</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__button" target="_self" href="#" role="button">
+                  <span class="button__text">Сохраненные статьи</span>
+                </a>
+              </li>
+              <li class="menu__item menu__item_sign menu__item_on">
+                <div class="menu__button" role="button">
+                  <span class="button__text">Авторизоваться</span>
+                </div>
+              </li>
+              <li class="menu__item menu__item_sign">
+                <a class="menu__button" target="_self" href="./index.html" role="button">
+                  <span class="button__text">Грета [-></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="search"> <!--секция поиска-->
+      <!--
+      <div class="search root__section"> секция поиска
         <h1 class="search__title">Что в мире творится?</h1>
-        <p class="comment">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <p class="section__paragraf">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form class="search__form" name="search">
           <span class="search__box">
             <input class="input input_type_search" name="request" placeholder="Введите тему новости" type="text" maxlength="400" autocomplete="off">
@@ -54,9 +57,10 @@
           </button>
         </form>
       </div>
+    -->
     </header>
 
-    <!--
+<!--
           <div class="profile root__section"> секция информации о пользователе
             <div class="user-info">
               <div class="user-info__photo"></div>
