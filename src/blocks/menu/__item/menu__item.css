@@ -2,6 +2,7 @@
 @import url(./_sign/menu__item_sign.css);
 
 .menu__item {
+  position: relative;
   margin-right: 0px;
   display: none;
 }
