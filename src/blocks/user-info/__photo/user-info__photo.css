@@ -1,0 +1,9 @@
+.user-info__photo {
+  width: 37.5%;
+  height: 462px;
+  background-image: url(../../../images/avatar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1000px;
+}
