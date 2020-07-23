@@ -1,0 +1,10 @@
+.footer__copyright {
+  width: 35%;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 32px 0 26px;
+}

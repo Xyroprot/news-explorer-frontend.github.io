@@ -77,10 +77,10 @@
         </div>
       </div>
     </div>
-<!--
-          <div class="places-list root__section"> секция со статьями
 
-            <div class="places-list_processing"> загрузка статей
+          <div class="places-list root__section"> <!--секция со статьями-->
+
+            <div class="places-list_processing"> <!--загрузка статей-->
               <div class="places-list__handler">
                 <i class="circle-preloader"></i>
               </div>
@@ -88,7 +88,7 @@
                 <p class="section__paragraph section__paragraph_response">Идет поиск новостей...</p>
               </div>
             </div>
-
+<!--
             <div class="places-list_response"> выдача статей
               <div class="places-list__title">
                 <h2 class="section__title">Результаты поиска</h2>
@@ -165,14 +165,12 @@
 
           </div>
         -->
-          <footer class="footer root__section"> подвал
+          <footer class="footer root__section"> <!--подвал-->
 
             <div class="footer__container">
-              <div class="fotter__copyright">
-                <p class="section__paragraph section__paragraph_footer">© 2020 Supersite, Powered by News API</p>
-              </div>
+              <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
               <nav class="menu">
-                <ul>
+                <ul class="menu__layout">
                   <li class="menu__item menu__item_on">
                     <a class="menu__button" target="_self" href="./index.html" role="button">
                       <span class="button__text">Главная</span>
@@ -183,14 +181,14 @@
                       <span class="button__text">Яндекс.Практикум</span>
                     </a>
                   </li>
-                  <li class="menu__item menu__item_on">
-                    <a class="menu__icon" target="_blank" href="https://github.com/Xyroprot">
-                      <img src="<%=require('../images/github.svg').default%>" alt="gh">
+                  <li class="menu__icon">
+                    <a target="_blank" href="https://github.com/Xyroprot">
+                      <img src="../images/github.svg" alt="">
                     </a>
                   </li>
-                  <li class="menu__item menu__item_on">
-                    <a class="menu__icon" target="_blank" href="https://www.facebook.com/yandex.praktikum">
-                      <img src="<%=require('../images/facebook.svg').default%>" alt="fb">
+                  <li class="menu__icon">
+                    <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
+                      <img src="../images/facebook.svg" alt="">
                     </a>
                   </li>
                 </ul>

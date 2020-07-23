@@ -1,0 +1,7 @@
+.menu__icon {
+  margin-right: 28px;
+}
+
+.menu__icon:last-of-type {
+  margin-right: 0px;
+}
