@@ -1,0 +1,7 @@
+.place-card__report {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 24px 24px;
+}

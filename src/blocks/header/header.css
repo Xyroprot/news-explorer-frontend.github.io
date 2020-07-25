@@ -9,7 +9,7 @@
   justify-content: flex-start;
   background-image: url('../../images/main.jpg');
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

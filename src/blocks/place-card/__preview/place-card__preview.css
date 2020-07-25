@@ -1,0 +1,6 @@
+.place-card__preview {
+  max-height: 576px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}

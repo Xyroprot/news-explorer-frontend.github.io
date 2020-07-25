@@ -1,0 +1,9 @@
+.place-card__image {
+  width: 100%;
+  min-height: 272px;
+  background-image: url(../../../images/articles/lenta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}

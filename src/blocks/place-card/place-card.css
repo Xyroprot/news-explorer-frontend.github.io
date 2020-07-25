@@ -1,0 +1,19 @@
+@import url(./__item/place-card__item.css);
+@import url(./__image/place-card__image.css);
+@import url(./__controls/place-card__controls.css);
+@import url(./__date/place-card__date.css);
+@import url(./__icon/place-card__icon.css);
+@import url(./__info/place-card__info.css);
+@import url(./__preview/place-card__preview.css);
+@import url(./__report/place-card__report.css);
+@import url(./__source/place-card__source.css);
+@import url(./__text/place-card__text.css);
+@import url(./__title/place-card__title.css);
+
+.place-card {
+  width: 32.68%;
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}

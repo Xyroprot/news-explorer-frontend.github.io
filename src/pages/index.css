@@ -10,4 +10,7 @@
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/user-info/user-info.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/circle-preloader/circle-preloader.css);
+@import url(../blocks/places-list/places-list.css);
+@import url(../blocks/place-card/place-card.css);
 

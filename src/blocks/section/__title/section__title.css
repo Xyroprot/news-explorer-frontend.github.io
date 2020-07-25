@@ -1,3 +1,5 @@
+@import url(./_response/section__title_response.css);
+
 .section__title {
   font-family: 'roboto_slabregular', Georgia, 'Times New Roman', Times, serif;
   font-style: normal;

@@ -15,7 +15,7 @@
   <div class="root">
 
     <header class="header"> <!--header-->
-      <div class="header__box">
+      <section class="header__box">
         <div class="header__layout root__section"> <!--секция элекментов навигации в заголовке страницы-->
           <span class="header__logo">NewsExplorer</span>
           <nav class="menu">
@@ -43,11 +43,11 @@
             </ul>
           </nav>
         </div>
-      </div>
+      </section>
 
-      <div class="search root__section"> <!--секция поиска-->
+      <section class="search root__section"> <!--секция поиска-->
         <h1 class="search__title">Что в мире творится?</h1>
-        <p class="section__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <p class="section__paragraph section__paragraph_text">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form class="search__form" name="search">
           <span class="search__box">
             <input class="input input_type_search" name="request" placeholder="Введите тему новости" type="text" maxlength="400" autocomplete="off">
@@ -56,145 +56,160 @@
             <span class="button__text">Искать</span>
           </button>
         </form>
-      </div>
+      </section>
     </header>
 
-    <div class="profile root__section"> <!--секция информации о пользователе-->
+    <section class="places-list places-list_on"> <!--секция со статьями-->
+
+      <!--загрузка статей; places-list__processing_on - активация секции-->
+      <section class="places-list__processing root__section">
+        <div class="places-list__handler">
+          <i class="circle-preloader"></i>
+        </div>
+        <div class="places-list__subtitle">
+          <p class="section__paragraph section__paragraph_subtitle">Идет поиск новостей...</p>
+        </div>
+      </section>
+
+      <!--отчет об ошибке; places-list__error_on - активация секции-->
+      <section class="places-list__error root__section">
+        <img src="../images/not-found.png" alt="" class="places-list__not-found">
+        <div class="places-list__title">
+          <h2 class="section__title section__title_response">Ничего не найдено</h2>
+        </div>
+        <div class="places-list__subtitle">
+          <p class="section__paragraph section__paragraph_subtitle">К сожалению по вашему запросу ничего не найдено.</p>
+        </div>
+      </section>
+
+      <!--выдача статей; places-list__response_on - активация секции-->
+      <section class="places-list__response places-list__response_on root__section">
+        <div class="places-list__title">
+          <h2 class="section__title">Результаты поиска</h2>
+        </div>
+
+        <div class="places-list__articles">
+
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_bookmark"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
+                </div>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Национальное достояние – парки</h3>
+                  <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                  <p class="place-card__source">Лента.ру</p>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_bookmark"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
+                </div>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
+                  <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                  <p class="place-card__source">Медуза</p>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_bookmark"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
+                </div>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                  <p class="place-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                  <p class="place-card__source">РИА</p>
+                </div>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="button places-list__button" rel="noopener" target="_self" role="button">
+          <span class="button__text">Показать ещё</span>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="profile root__section"> <!--секция информации о пользователе-->
       <div class="user-info">
         <div class="user-info__photo"></div>
         <div class="user-info__data">
           <div class="user-info__title">
-            <h2 class="section__title">Об авторе</h2>
+            <h2 class="section__title ">Об авторе</h2>
           </div>
           <div class="user-info__about">
-            <p class="section__paragraph">
+            <p class="section__paragraph section__paragraph_text">
               Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
             </p>
           </div>
           <div class="user-info__about">
-            <p class="section__paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+            <p class="section__paragraph section__paragraph_text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-          <div class="places-list root__section"> <!--секция со статьями-->
+    <footer class="footer root__section"> <!--подвал-->
 
-            <div class="places-list_processing"> <!--загрузка статей-->
-              <div class="places-list__handler">
-                <i class="circle-preloader"></i>
-              </div>
-              <div class="places-list__subtitle">
-                <p class="section__paragraph section__paragraph_response">Идет поиск новостей...</p>
-              </div>
-            </div>
-<!--
-            <div class="places-list_response"> выдача статей
-              <div class="places-list__title">
-                <h2 class="section__title">Результаты поиска</h2>
-              </div>
-              <article class="place-card">
-                <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-                  <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/lenta.jpg);">
-                    <div class="place-card__controls">
-                      <button class="place-card__icon place-card__icon_bookmark"></button>
-                      <div class="place-card__icon">
-                        <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="place-card__preview">
-                    <p class="place-card__date">2 августа, 2019</p>
-                    <h3 class="place-card__title">Национальное достояние – парки</h3>
-                    <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <p class="place-card__source">Лента.ру</p>
-                  </div>
-                </a>
-              </article>
-              <article class="place-card">
-                <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-                  <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/meduza.jpg);">
-                    <div class="place-card__controls">
-                      <button class="place-card__icon place-card__icon_bookmark"></button>
-                      <div class="place-card__icon">
-                        <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="place-card__preview">
-                    <p class="place-card__date">2 августа, 2019</p>
-                    <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
-                    <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                    <p class="place-card__source">Медуза</p>
-                  </div>
-                </a>
-              </article>
-              <article class="place-card">
-                <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-                  <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../images/articles/ria.jpg);">
-                    <div class="place-card__controls">
-                      <button class="place-card__icon place-card__icon_bookmark"></button>
-                      <div class="place-card__icon">
-                        <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-                      </div>
-                  </div>
-                  <div class="place-card__preview">
-                    <p class="place-card__date">2 августа, 2019</p>
-                    <h3 class="place-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                    <p class="place-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                    <p class="place-card__source">Риа</p>
-                  </div>
-                </a>
-              </article>
-              <div class="places-list__button button" rel="noopener" target="_self" role="button">
-                <span class="button__text">Показать ещё</span>
-              </div>
-            </div>
+      <div class="footer__container">
+        <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
+        <nav class="menu">
+          <ul class="menu__layout">
+            <li class="menu__item menu__item_on">
+              <a class="menu__button" target="_self" href="./index.html" role="button">
+                <span class="button__text">Главная</span>
+              </a>
+            </li>
+            <li class="menu__item menu__item_on">
+              <a class="menu__button" target="_self" href="https://praktikum.yandex.ru/" role="button">
+                <span class="button__text">Яндекс.Практикум</span>
+              </a>
+            </li>
+            <li class="menu__icon">
+              <a target="_blank" href="https://github.com/Xyroprot">
+                <img src="../images/github.svg" alt="">
+              </a>
+            </li>
+            <li class="menu__icon">
+              <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
+                <img src="../images/facebook.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
-            <div class="places-list_error"> отчет об ошибке
-              <div class="places-list__handler">
-                <img src="<%=require('../images/not-found.png').default%>" alt="not-found" class="places-list__not-found">
-              </div>
-              <div class="places-list__title places-list__title_response">
-                <h2 class="section__title section__title_response">Ничего не найдено</h2>
-              </div>
-              <div class="places-list__subtitle">
-                <p class="section__paragraph section__paragraph_response">К сожалению по вашему запросу ничего не найдено.</p>
-              </div>
-            </div>
 
-          </div>
-        -->
-          <footer class="footer root__section"> <!--подвал-->
-
-            <div class="footer__container">
-              <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
-              <nav class="menu">
-                <ul class="menu__layout">
-                  <li class="menu__item menu__item_on">
-                    <a class="menu__button" target="_self" href="./index.html" role="button">
-                      <span class="button__text">Главная</span>
-                    </a>
-                  </li>
-                  <li class="menu__item menu__item_on">
-                    <a class="menu__button" target="_self" href="https://praktikum.yandex.ru/" role="button">
-                      <span class="button__text">Яндекс.Практикум</span>
-                    </a>
-                  </li>
-                  <li class="menu__icon">
-                    <a target="_blank" href="https://github.com/Xyroprot">
-                      <img src="../images/github.svg" alt="">
-                    </a>
-                  </li>
-                  <li class="menu__icon">
-                    <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
-                      <img src="../images/facebook.svg" alt="">
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </footer>
 <!--
           <div class="popup popup_sign-in"> всплывающее окно входа (добавить модификатор _is-opened)
             <div class="popup__content">
@@ -256,3 +271,4 @@
   -->
 </body>
 </html>
+

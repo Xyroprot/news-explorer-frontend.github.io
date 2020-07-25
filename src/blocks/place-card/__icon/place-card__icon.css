@@ -1,0 +1,10 @@
+@import url(./_bookmark/place-card__icon_bookmark.css);
+@import url(./_notification/place-card__icon_notification.css);
+
+.place-card__icon {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}

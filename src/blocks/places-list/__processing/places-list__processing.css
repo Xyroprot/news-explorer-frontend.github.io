@@ -1,0 +1,10 @@
+@import url(./_on/places-list__processing_on.css);
+
+.places-list__processing {
+  max-height: 120px;
+  width: 20%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
