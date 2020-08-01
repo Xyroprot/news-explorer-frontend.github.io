@@ -3,4 +3,9 @@
   line-height: 12px;
 }
 
-
+@media screen and (max-width: 1120px) {
+  .place-card__info_hint {
+    font-size: 9px;
+    line-height: 9px;
+  }
+}

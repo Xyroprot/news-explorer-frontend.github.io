@@ -1,5 +1,20 @@
+@import url(./_error/places-list__title_error.css);
+@import url(./_response/places-list__title_response.css);
+@import url(./_saved/places-list__title_saved.css);
+
 .places-list__title {
   width: 100%;
   color: #1A1B22;
-  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 720px) {
+  .places-list__title {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .places-list__title {
+    width: 100%;
+  }
 }

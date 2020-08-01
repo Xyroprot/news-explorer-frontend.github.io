@@ -1,14 +1,33 @@
+@import url(./_on/menu__button_on.css);
+@import url(./_underlined/menu__button_underlined.css);
+@import url(./_sign/menu__button_sign.css);
+
 .menu__button {
+  display: none;
   color: unset;
   text-decoration: none;
 }
 
-.menu__item.menu__item_underlined .menu__button::after {
-  position: absolute;
-  bottom: -29px;
-  left: 0;
-  display: block;
-  width: 100%;
-  content: '';
-  border-top: 3px solid;
+.menu__button:first-of-type {
+  margin-right: 34px;
+}
+
+.menu__button:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 820px) {
+  .menu__button:first-of-type  {
+    margin-right: 16px;
+  }
+
+  .menu__button:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .menu__button {
+    margin: 0;
+  }
 }

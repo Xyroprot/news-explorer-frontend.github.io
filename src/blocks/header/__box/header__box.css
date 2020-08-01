@@ -1,5 +1,4 @@
-.header__box {
-  color: #FFFFFF;
-  background: rgba(196, 196, 196, 0.01);
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-}
+@import url(./_theme/_light/header__box_theme_light.css);
+@import url(./_theme/_dark/header__box_theme_dark.css);
+@import url(./_theme/_dark-popup/header__box_theme_dark-popup.css)
+

@@ -4,3 +4,15 @@
   height: 75px;
   margin-bottom: 24px;
 }
+
+@media screen and (max-width: 820px) {
+  .places-list__handler {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .places-list__handler {
+    margin-bottom: 10px;
+  }
+}

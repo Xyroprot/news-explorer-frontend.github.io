@@ -9,3 +9,11 @@
 .place-card__controls:hover .place-card__icon.place-card__icon_notification {
   display: flex;
 }
+
+
+@media screen and (max-width: 1120px) {
+  .place-card__icon.place-card__icon_notification {
+    width: 55px;
+  }
+}
+

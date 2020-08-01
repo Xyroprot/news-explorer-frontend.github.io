@@ -1,0 +1,9 @@
+.places-list__title_response {
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 1024px) {
+  .places-list__title_response {
+    margin-bottom: 32px;
+  }
+}

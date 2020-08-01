@@ -1,0 +1,6 @@
+@media screen and (max-width: 670px) {
+  .popup__menu_theme_light {
+    color: #1A1B22;
+    background-color: #FFFFFF;
+  }
+}

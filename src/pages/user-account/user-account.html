@@ -4,228 +4,241 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsExplorer</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="stylesheet" href="./user-account.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Новости по запросу">
   <meta name="Author" content="Владимир Дьяконов">
-  <link rel="shortcut icon" href="">
-  <link rel="icon" type="image/png" href="<%=require('../images/favicon/favicon.png').default%">
+  <link rel="icon" type="image/png" href="../../images/favicon/favicon.png">
 </head>
 <body>
   <div class="root">
 
-    <header class="header root__section"> <!--header-->
-      <div class="header__layout"> <!--секция элекментов навигации в заголовке страницы-->
-        <span class="header__logo header__logo_theme_white">NewsExplorer</span>
-        <nav class="menu">
-          <ul>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button" target="_self" href="./index.html" role="button">
-                <span class="button__text button__text_theme_white">Главная</span>
-              </a>
-            </li>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button" target="_self" href="./user-account/user-account.html" role="button">
-                <span class="button__text button__text_theme_white">Сохраненные статьи</span>
-              </a>
-            </li>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button menu__button_sign" target="_self" href="./index.html" role="button">
-                <span class="button__text button__text_theme_white">Грета [-></span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="user-info"> <!--секция информации о контенте пользователя-->
-        <div class="user-info__data">
-          <div class="user-info__about">
-            <p class="section__paragraf section__paragraf_theme_grey">Сохранённые статьи</p>
-          </div>
-          <div class="user-info__title">
-            <h2 class="section__title">Грета, у вас 5 сохранённых статей</h2>
-          </div>
-          <div class="user-info__about">
-            <p class="section__paragraf">По ключевым словам: <span class="section__paragraf_theme_bold">Природа, Тайга</span> и <span class="section__paragraf_theme_bold">2 другим</span></p>
+    <header> <!--header-->
+
+      <section class="header__box header__box_theme_light">
+        <div class="header__layout root__section"> <!--секция элекментов навигации в заголовке страницы-->
+          <span class="header__logo">NewsExplorer</span>
+          <nav class="menu">
+            <ul class="menu__layout">
+              <li class="menu__item menu__item_header">
+                <a class="menu__button menu__button_on " target="_self" href="../index.html" role="button">
+                  <span class="button__text button__text_header">Главная</span>
+                </a>
+                <a class="menu__button menu__button_underlined menu__button_on" target="_self" href="./user-account.html" role="button">
+                  <span class="button__text button__text_header">Сохраненные статьи</span>
+                </a>
+              </li>
+              <li class="menu__item menu__item_header">
+                <a class="menu__button menu__button_on menu__button_sign" target="_self" href="../index.html" role="button">
+                  <span class="button__text button__text_header">Грета <img src="../../images/union.svg" alt=""> </span>
+                </a>
+              </li>
+              <li class="menu__item ">
+                <div class="menu__button" role="button">
+                  <img src="../../images/menu_mobile_black.svg" alt="">
+                </div>
+              </li>
+              <li class="menu__item menu__item_icon"> <!-- menu__item_icon -->
+                <div class="menu__button" role="button">
+                  <img src="../../images/close.svg" alt="" class="popup__close popup__close_theme_light"> <!--menu__button_on-->
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section class="profile profile_account root__section"> <!--секция информации о пользовательских статьях-->
+        <div class="user-info">
+          <div class="user-info__data user-info__data_account">
+            <div class="user-info__about">
+              <p class="section__paragraph section__paragraph_subtitle section__paragraph_account">Сохранённые статьи</p>
+            </div>
+            <div class="user-info__title">
+              <h2 class="section__title">Грета, у вас 5 сохранённых статей</h2>
+            </div>
+            <div class="user-info__about">
+              <p class="section__paragraph section__paragraph_text section__paragraph_account">По ключевым словам: Природа, Тайга и 2 другим</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
     </header>
 
-    <div class="places-list root__section"> <!--секция сохраненных статей-->
+    <section class="places-list places-list_on"> <!--секция со статьями; places-list_on - активация секции-->
+      <!--выдача статей; places-list__response_on - активация секции-->
+      <section class="places-list__response places-list__response_on root__section">
+        <div class="places-list__articles">
 
-      <div class="places-list_response"> <!--выдача статей-->
-        <article class="place-card">
-          <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-            <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../../images/articles/dzen.jpg);">
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__icon place-card__icon_tag">
+                <p class="place-card__info place-card__info_category">Природа</p>
+              </div>
               <div class="place-card__controls">
                 <button class="place-card__icon place-card__icon_delete"></button>
-                <div class="place-card__icon">
+                <div class="place-card__icon place-card__icon_notification">
                   <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
                 </div>
-                <div class="place-card__icon place-card__icon_tag">
-                  <p class="place-card__info">Природа</p>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Национальное достояние – парки</h3>
+                  <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                  <p class="place-card__source">Лента.ру</p>
                 </div>
-              </div>
+              </a>
+            </div>
+          </article>
 
-              <span class="place-card__icon place-card__icon_info">Природа</span>
-              <span class="place-card__icon place-card__icon_info">Войдите, чтобы сохранять статьи</span>
-              <button class="place-card__icon place-card__icon_delete"></button>
-            </div>
-            <div class="place-card__preview">
-              <p class="place-card__date">2 августа, 2019</p>
-              <h3 class="place-card__title">Национальное достояние – парки</h3>
-              <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <p class="place-card__source">Дзен</p>
-            </div>
-          </a>
-        </article>
-        <article class="place-card">
-          <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-            <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../../images/articles/affiche.jpg);">
-              <button class="place-card__icon place-card__icon_delete"></button>
-              <div class="place-card__icon">
-                <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
-              </div>
+          <article class="place-card">
+            <div class="place-card__item">
               <div class="place-card__icon place-card__icon_tag">
-                <p class="place-card__info">Природа</p>
+                <p class="place-card__info place-card__info_category">Природа</p>
               </div>
-            </div>
-            <div class="place-card__preview">
-              <p class="place-card__date">2 августа, 2019</p>
-              <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <p class="place-card__source">Афиша</p>
-            </div>
-          </a>
-        </article>
-        <article class="place-card">
-          <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-            <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../../images/articles/mediazone.jpg);">
-              <button class="place-card__icon place-card__icon_delete"></button>
-              <div class="place-card__icon">
-                <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
-              </div>
-              <div class="place-card__icon place-card__icon_tag">
-                <p class="place-card__info">Тайга</p>
-              </div>
-            </div>
-            <div class="place-card__preview">
-              <p class="place-card__date">2 августа, 2019</p>
-              <h3 class="place-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="place-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <p class="place-card__source">Медиазона</p>
-            </div>
-          </a>
-        </article>
-        <article class="place-card">
-          <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-            <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../../images/articles/dzen.jpg);">
               <div class="place-card__controls">
                 <button class="place-card__icon place-card__icon_delete"></button>
-                <div class="place-card__icon">
+                <div class="place-card__icon place-card__icon_notification">
                   <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
                 </div>
-                <div class="place-card__icon place-card__icon_tag">
-                  <p class="place-card__info">Парки</p>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
+                  <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                  <p class="place-card__source">Медуза</p>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__icon place-card__icon_tag">
+                <p class="place-card__info place-card__info_category">Тайга</p>
+              </div>
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_delete"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
                 </div>
               </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                  <p class="place-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                  <p class="place-card__source">РИА</p>
+                </div>
+              </a>
+            </div>
+          </article>
 
-              <span class="place-card__icon place-card__icon_info">Природа</span>
-              <span class="place-card__icon place-card__icon_info">Войдите, чтобы сохранять статьи</span>
-              <button class="place-card__icon place-card__icon_delete"></button>
-            </div>
-            <div class="place-card__preview">
-              <p class="place-card__date">2 августа, 2019</p>
-              <h3 class="place-card__title">Национальное достояние – парки</h3>
-              <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <p class="place-card__source">Дзен</p>
-            </div>
-          </a>
-        </article>
-        <article class="place-card">
-          <a class="place-card__item" href="https://stampsy.com/na-elektrichkakh-do-baikala">
-            <div class="place-card__image" data-url="https://milkov.ru/images/800x600_nyc2s5-cefalu-from-la-rocca.jpg" style="background-image: url(../../images/articles/affiche.jpg);">
-              <button class="place-card__icon place-card__icon_delete"></button>
-              <div class="place-card__icon">
-                <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
-              </div>
+          <article class="place-card">
+            <div class="place-card__item">
               <div class="place-card__icon place-card__icon_tag">
-                <p class="place-card__info">Фотографии</p>
+                <p class="place-card__info place-card__info_category">Парки</p>
               </div>
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_delete"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
+                </div>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Национальное достояние – парки</h3>
+                  <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                  <p class="place-card__source">Лента.ру</p>
+                </div>
+              </a>
             </div>
-            <div class="place-card__preview">
-              <p class="place-card__date">2 августа, 2019</p>
-              <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
-              <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <p class="place-card__source">Афиша</p>
-            </div>
-          </a>
-        </article>
-      </div>
+          </article>
 
-    </div>
+          <article class="place-card">
+            <div class="place-card__item">
+              <div class="place-card__icon place-card__icon_tag">
+                <p class="place-card__info place-card__info_category">Фотография</p>
+              </div>
+              <div class="place-card__controls">
+                <button class="place-card__icon place-card__icon_delete"></button>
+                <div class="place-card__icon place-card__icon_notification">
+                  <p class="place-card__info place-card__info_hint">Убрать из сохраненных</p>
+                </div>
+              </div>
+              <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
+                <div class="place-card__image"></div>
+                <div class="place-card__report">
+                  <p class="place-card__date">2 августа, 2019</p>
+                  <h3 class="place-card__title">Лесные огоньки: история одной фотографии</h3>
+                  <p class="place-card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                  <p class="place-card__source">Медуза</p>
+                </div>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
 
     <footer class="footer root__section"> <!--подвал-->
+
       <div class="footer__container">
-        <div class="fotter__copyright">
-          <p class="section__paragraf section__paragraf_footer">© 2020 Supersite, Powered by News API</p>
-        </div>
+        <p class="footer__copyright">© 2020 Supersite, Powered by News API</p>
         <nav class="menu">
-          <ul>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button" target="_self" href="./index.html" role="button">
-                <span class="button__text">Главная</span>
+          <ul class="menu__layout">
+            <li class="menu__item">
+              <a class="menu__button menu__button_on" target="_self" href="../index.html" role="button">
+                <span class="button__text button__text_footer">Главная</span>
+              </a>
+              <a class="menu__button menu__button_on" target="_blank" href="https://praktikum.yandex.ru/" role="button">
+                <span class="button__text button__text_footer">Яндекс.Практикум</span>
               </a>
             </li>
-            <li class="menu__item menu__item_on">
-              <a class="menu__button" target="_self" href="https://praktikum.yandex.ru/" role="button">
-                <span class="button__text">Яндекс.Практикум</span>
+            <li class="menu__icon">
+              <a target="_blank" href="https://github.com/Xyroprot">
+                <img src="../../images/github.svg" alt="">
               </a>
-            </li>
-            <li class="menu__item menu__item_on">
-              <a class="menu__icon" target="_blank" href="https://github.com/Xyroprot">
-                <img src="<%=require('../images/github.svg').default%>" alt="gh">
-              </a>
-            </li>
-            <li class="menu__item menu__item_on">
-              <a class="menu__icon" target="_blank" href="https://www.facebook.com/yandex.praktikum">
-                <img src="<%=require('../images/facebook.svg').default%>" alt="fb">
+              <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
+                <img src="../../images/facebook.svg" alt="">
               </a>
             </li>
           </ul>
         </nav>
       </div>
     </footer>
+
+    <div class="popup "> <!-- всплывающее меню (добавить модификатор popup_is-opened)-->
+      <div class="popup__menu popup__menu_theme_light">
+        <nav class="menu">
+          <ul class="menu__column-layout"> <!--menu__layout-->
+            <li class="menu__item">
+              <a class="menu__button menu__button_on" target="_self" href="../index.html" role="button">
+                <span class="button__text button__text_header">Главная</span>
+              </a>
+              <a class="menu__button menu__button_on" target="_self" href="./user-account.html" role="button">
+                <span class="button__text button__text_header">Сохраненные статьи</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__button menu__button_on menu__button_sign" target="_self" href="../index.html" role="button">
+                <span class="button__text button__text_section">Грета <img src="../../images/union.svg" alt=""> </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
-
-
-      <div class="place-card__controls">
-        <button class="place-card__icon place-card__icon_bookmark"></button>
-        <div class="place-card__icon place-card__icon_notification">
-          <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-        </div>
-      </div>
-
-<article class="place-card">
-  <div class="place-card__item">
-    <div class="place-card__controls">
-      <button class="place-card__icon place-card__icon_bookmark"></button>
-      <div class="place-card__icon place-card__icon_notification">
-        <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-      </div>
-    </div>
-    <a href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
-      <div class="place-card__image">
-      </div>
-      <div class="place-card__preview">
-        <p class="place-card__date">2 августа, 2019</p>
-        <h3 class="place-card__title">Национальное достояние – парки</h3>
-        <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        <p class="place-card__source">Лента.ру</p>
-      </div>
-    </a>
-  </div>
-</article>

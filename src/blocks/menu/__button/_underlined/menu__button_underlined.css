@@ -1,0 +1,20 @@
+.menu__button.menu__button_underlined::after {
+  position: relative;
+  bottom: -27px;
+  display: block;
+  width: 100%;
+  content: '';
+  border-top: 3px solid;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu__button.menu__button_underlined::after {
+    bottom: -21px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .menu__button.menu__button_underlined::after {
+    bottom: -19px;
+  }
+}

@@ -1,8 +1,10 @@
+@import url(./_header/button__text_header.css);
+@import url(./_footer/button__text_footer.css);
+@import url(./_section/button__text_section.css);
+
 .button__text {
   font-family: 'robotomedium', Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  text-align: center;
 }
 

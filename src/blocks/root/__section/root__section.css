@@ -3,11 +3,28 @@
   margin: 0 auto;
 }
 
-/*
-@media screen and (max-width: 980px) {
+
+@media screen and (max-width: 1240px) {
   .root__section {
-    width: 90%;
+    width: calc(100% - 160px);
   }
 }
-*/
 
+
+@media screen and (max-width: 1000px) {
+  .root__section {
+    width: calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .root__section {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .root__section {
+    width: calc(100% - 32px);
+  }
+}

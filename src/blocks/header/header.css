@@ -3,7 +3,6 @@
 @import url('./__logo/header__logo.css');
 
 .header {
-  height: 576px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,9 +11,3 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-/*
-
-  display: flex;
-  align-items: center;
-*/

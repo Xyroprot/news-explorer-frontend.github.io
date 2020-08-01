@@ -1,0 +1,14 @@
+.place-card__icon_delete {
+  width: 40px;
+  background-image: url(../../../../images/trash-normal.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 11px 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.place-card__icon_delete:hover {
+  background-image: url(../../../../images/trash-hover.svg);
+}

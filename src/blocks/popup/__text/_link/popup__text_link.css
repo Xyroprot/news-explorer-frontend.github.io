@@ -1,0 +1,13 @@
+.popup__text_link {
+  color: #2F71E5;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.popup__text.popup__text_link {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1A1B22;
+}

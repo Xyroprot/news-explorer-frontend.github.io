@@ -1,7 +1,12 @@
 .menu__icon {
-  margin-right: 28px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu__icon:last-of-type {
-  margin-right: 0px;
+@media screen and (max-width: 670px) {
+  .menu__icon {
+    margin-top: 13px;
+  }
 }

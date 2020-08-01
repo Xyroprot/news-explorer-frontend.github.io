@@ -11,3 +11,11 @@
   justify-content: flex-start;
   color: #1A1B22;
 }
+
+@media screen and (max-width: 480px) {
+  .user-info {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

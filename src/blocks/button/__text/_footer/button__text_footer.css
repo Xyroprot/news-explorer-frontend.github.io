@@ -1,0 +1,11 @@
+.button__text_footer {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 670px) {
+  .button__text_footer {
+    line-height: 48px;
+  }
+}

@@ -8,3 +8,27 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+@media screen and (max-width: 1180px) {
+  .places-list__error {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .places-list__error {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .places-list__error {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .places-list__error {
+    width: 90%;
+  }
+}

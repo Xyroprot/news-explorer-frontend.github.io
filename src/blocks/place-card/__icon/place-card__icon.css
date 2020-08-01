@@ -1,5 +1,7 @@
 @import url(./_bookmark/place-card__icon_bookmark.css);
 @import url(./_notification/place-card__icon_notification.css);
+@import url(./_delete/place-card__icon_delete.css);
+@import url(./_tag/place-card__icon_tag.css);
 
 .place-card__icon {
   display: flex;
