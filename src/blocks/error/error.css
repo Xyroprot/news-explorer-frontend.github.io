@@ -1,0 +1,15 @@
+@import url(./_on/error_on.css);
+
+.error {
+  display: none;
+  position: absolute;
+  top: 55px;
+}
+
+.error:nth-of-type(2) {
+  top: 140px;
+}
+
+.error:nth-of-type(3) {
+  top: 225px;
+}

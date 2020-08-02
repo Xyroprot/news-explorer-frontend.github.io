@@ -1,0 +1,10 @@
+@import url(./_signed/popup__title_signed.css);
+
+.popup__title {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 22px;
+}

@@ -1,0 +1,9 @@
+@import url(./_error/popup__text_error.css);
+@import url(./_field-name/popup__text_field-name.css);
+@import url(./_link/popup__text_link.css);
+
+.popup__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+}

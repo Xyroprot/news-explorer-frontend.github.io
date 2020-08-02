@@ -1,0 +1,30 @@
+.search__title {
+  font-family: 'roboto_slabregular', Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+  margin: 0 0 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .search__title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .search__title {
+    width: 50%;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 0 0 16px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .search__title {
+    width: 70%;
+  }
+}

@@ -1,0 +1,12 @@
+.menu__icon {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 670px) {
+  .menu__icon {
+    margin-top: 13px;
+  }
+}

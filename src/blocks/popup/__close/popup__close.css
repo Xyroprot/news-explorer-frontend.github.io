@@ -1,0 +1,17 @@
+@import url(./_theme_light/popup__close_theme_light.css);
+
+.popup__close {
+  width: 35px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  left: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 670px) {
+  .popup__close {
+    width: 26px;
+    position: static;
+  }
+}

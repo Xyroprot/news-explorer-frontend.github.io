@@ -1,0 +1,19 @@
+@import url(./_theme_dark/popup__menu_theme_dark.css);
+@import url(./_theme_light/popup__menu_theme_light.css);
+
+@media screen and (min-width: 671px) {
+  .popup__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .popup__menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: auto;
+    padding: 16px 16px 24px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}

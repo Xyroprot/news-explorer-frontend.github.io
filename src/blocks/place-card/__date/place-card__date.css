@@ -1,0 +1,15 @@
+.place-card__date {
+  font-family: 'source_sans_prolight', Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  margin: 0 0 12px;
+}
+
+@media screen and (max-width: 480px) {
+  .place-card__date {
+    margin: 0 0 10px;
+  }
+}

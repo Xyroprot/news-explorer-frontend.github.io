@@ -1,0 +1,26 @@
+.places-list__articles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 32.3%);
+  grid-gap: 16px 16px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1225px) {
+  .places-list__articles {
+    grid-gap: 8px 8px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .places-list__articles {
+    grid-template-columns: repeat(auto-fill, 43.8%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .places-list__articles {
+    grid-template-columns: repeat(auto-fill, 100%);
+    grid-gap: 10px 0;
+  }
+}

@@ -1,0 +1,7 @@
+.search__box {
+  display: flex;
+  align-content: center;
+  width: 65%;
+  height: 29%;
+  margin-left: 4%;
+}

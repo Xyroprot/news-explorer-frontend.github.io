@@ -1,0 +1,25 @@
+.places-list__button {
+  width: 288px;
+  background: #FFFFFF;
+  border-radius: 80px;
+  margin-top: 64px;
+}
+
+.places-list__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .places-list__button {
+    width: 240px;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .button.places-list__button {
+    width: 240px;
+    height: 56px;
+    margin-top: 22px;
+  }
+}

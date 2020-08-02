@@ -1,0 +1,17 @@
+.header__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__layout {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .header__layout {
+    height: 66px;
+  }
+}

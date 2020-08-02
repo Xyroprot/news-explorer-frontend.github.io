@@ -1,0 +1,30 @@
+.footer__copyright {
+  width: 35%;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 32px 0 26px;
+}
+
+@media screen and (max-width: 1055px) {
+  .footer__copyright {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer__copyright {
+    width: 100%;
+    text-align: center;
+    margin: 22px 0 26px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__copyright {
+    margin: 0 0 26px;
+  }
+}

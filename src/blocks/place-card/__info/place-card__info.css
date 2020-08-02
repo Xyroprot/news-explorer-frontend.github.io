@@ -1,0 +1,10 @@
+@import url(./_hint/place-card__info_hint.css);
+@import url(./_category/place-card__info_category.css);
+
+.place-card__info {
+  font-family: 'robotomedium', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+}

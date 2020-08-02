@@ -1,0 +1,20 @@
+.place-card__icon_bookmark {
+  width: 40px;
+  background-image: url(../../../../images/bookmark-normal.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 11px 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.place-card__icon_bookmark:hover {
+  background-image: url(../../../../images/bookmark-hover.svg);
+}
+
+.place-card__icon_bookmark:focus {
+  background-image: url(../../../../images/bookmark-marked.svg);
+  outline: none;
+}
+

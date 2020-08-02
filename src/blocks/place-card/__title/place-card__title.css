@@ -1,0 +1,37 @@
+.place-card__title {
+  font-family: 'roboto_slabregular', Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  margin: 0 0 16px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .place-card__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .place-card__title {
+    margin: 0 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .place-card__title {
+    line-height: 26px;
+  }
+}
+
+
+

@@ -1,0 +1,17 @@
+@import url(./_response/section__title_response.css);
+
+.section__title {
+  font-family: 'roboto_slabregular', Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .section__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}

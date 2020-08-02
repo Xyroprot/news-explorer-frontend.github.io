@@ -1,0 +1,16 @@
+@import url(./__text/button__text.css);
+@import url(./__popup/button__popup.css);
+@import url(./_search/button_search.css);
+
+.button {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}

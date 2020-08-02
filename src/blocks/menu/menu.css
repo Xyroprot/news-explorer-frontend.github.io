@@ -1,0 +1,15 @@
+@import url(./__button/menu__button.css);
+@import url(./__item/menu__item.css);
+@import url(./__layout/menu__layout.css);
+@import url(./__column-layout/menu__column-layout.css);
+@import url(./__icon/menu__icon.css);
+
+.menu {
+  display: flex;
+}
+
+@media screen and (max-width: 670px) {
+  .menu {
+    width: 100%;
+  }
+}

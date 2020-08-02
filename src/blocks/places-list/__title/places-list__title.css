@@ -1,0 +1,19 @@
+@import url(./_error/places-list__title_error.css);
+@import url(./_response/places-list__title_response.css);
+
+.places-list__title {
+  width: 100%;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 720px) {
+  .places-list__title {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .places-list__title {
+    width: 100%;
+  }
+}

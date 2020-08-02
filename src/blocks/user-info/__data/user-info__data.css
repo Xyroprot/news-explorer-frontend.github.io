@@ -1,0 +1,27 @@
+@import url(./_account/user-info__data_account.css);
+
+.user-info__data {
+  width: 55%;
+  margin: 50px 0 0 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) {
+  .user-info__data {
+    margin-left: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-info__data {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-info__data {
+    width: 100%;
+    margin: 0;
+  }
+}

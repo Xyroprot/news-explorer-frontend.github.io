@@ -1,0 +1,19 @@
+.button__text_header {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 820px) {
+  .button__text_header {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 670px) {
+  .button__text_header {
+    font-size: 18px;
+    line-height: 56px;
+  }
+}

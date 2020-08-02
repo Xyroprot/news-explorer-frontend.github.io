@@ -1,0 +1,49 @@
+.user-info__photo {
+  width: 37.5%;
+  height: 464px;
+  background-image: url(../../../images/avatar.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1000px;
+}
+
+@media screen and (max-width: 1240px) {
+  .user-info__photo {
+    height: 348px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .user-info__photo {
+    margin-top: 20px;
+    height: 232px;
+    width: 232px;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .user-info__photo {
+    height: 232px;
+    width: 232px;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-info__photo {
+    height: 272px;
+    width: 272px;
+    align-self: center;
+    margin: 0 0 24px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .user-info__photo {
+    height: 100%;
+    padding-bottom: 100%;
+  }
+}

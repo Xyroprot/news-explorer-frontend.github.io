@@ -1,0 +1,32 @@
+.search__form {
+  width: 100%;
+  height: 64px;
+  background: #FFFFFF;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 64px 0 0;
+}
+
+@media screen and (max-width: 1065px) {
+  .search__form {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .search__form {
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .search__form {
+    margin: 48px 0 0;
+  }
+}

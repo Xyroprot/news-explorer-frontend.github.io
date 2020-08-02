@@ -1,0 +1,19 @@
+.place-card__icon.place-card__icon_notification {
+  display: none;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+
+.place-card__controls:hover .place-card__icon.place-card__icon_notification {
+  display: flex;
+}
+
+
+@media screen and (max-width: 1120px) {
+  .place-card__icon.place-card__icon_notification {
+    width: 55px;
+  }
+}
+

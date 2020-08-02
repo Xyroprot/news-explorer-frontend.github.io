@@ -1,0 +1,12 @@
+@import url(./_subtitle/section__paragraph_subtitle.css);
+@import url(./_text/section__paragraph_text.css);
+@import url(./_account/section__paragraph_account.css);
+
+.section__paragraph {
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}

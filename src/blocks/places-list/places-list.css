@@ -1,0 +1,35 @@
+@import url(./_on/places-list_on.css);
+@import url(./__processing/places-list__processing.css);
+@import url(./__error/places-list__error.css);
+@import url(./__response/places-list__response.css);
+@import url(./__articles/places-list__articles.css);
+@import url(./__handler/places-list__handler.css);
+@import url(./__title/places-list__title.css);
+@import url(./__subtitle/places-list__subtitle.css);
+@import url(./__not-found/places-list__not-found.css);
+@import url(./__button/places-list__button.css);
+
+.places-list {
+  display: none;
+  width: 100%;
+  background: #F5F6F7;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .places-list {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .places-list {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .places-list {
+    padding: 32px 0;
+  }
+}

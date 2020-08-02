@@ -1,0 +1,14 @@
+.user-info__about {
+  display: flex;
+  margin: 0 0 24px;
+}
+
+.user-info__about:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .user-info__about {
+    margin: 0 0 16px;
+  }
+}
