@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsExplorer</title>
-  <link rel="stylesheet" href="./user-account.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Новости по запросу">
   <meta name="Author" content="Владимир Дьяконов">
-  <link rel="icon" type="image/png" href="../../images/favicon/favicon.png">
+  <link rel="icon" type="image/png" href="<%=require('../../images/favicon.png').default%>">
 </head>
 <body>
   <div class="root">
@@ -20,8 +19,9 @@
           <span class="header__logo">NewsExplorer</span>
           <nav class="menu">
             <ul class="menu__layout">
+              <!--активация кнопок осуществляется добавлением модификатора menu__button_on-->
               <li class="menu__item menu__item_header">
-                <a class="menu__button menu__button_on " target="_self" href="../index.html" role="button">
+                <a class="menu__button menu__button_on " target="_self" href="./index.html" role="button">
                   <span class="button__text button__text_header">Главная</span>
                 </a>
                 <a class="menu__button menu__button_underlined menu__button_on" target="_self" href="./user-account.html" role="button">
@@ -29,18 +29,19 @@
                 </a>
               </li>
               <li class="menu__item menu__item_header">
-                <a class="menu__button menu__button_on menu__button_sign" target="_self" href="../index.html" role="button">
-                  <span class="button__text button__text_header">Грета <img src="../../images/union.svg" alt=""> </span>
+                <a class="menu__button menu__button_on menu__button_sign" target="_self" href="./index.html" role="button">
+                  <span class="button__text button__text_header">Грета <img src="<%=require('../../images/union.svg').default%>" alt="-->"> </span>
                 </a>
               </li>
-              <li class="menu__item ">
+              <!--активация иконок на разрешении ниже 670px осуществляется добавлением модификатора menu__item_icon-->
+              <li class="menu__item menu__item_icon">
                 <div class="menu__button" role="button">
-                  <img src="../../images/menu_mobile_black.svg" alt="">
+                  <img src="<%=require('../../images/menu_mobile_black.svg').default%>" alt="menu">
                 </div>
               </li>
-              <li class="menu__item menu__item_icon"> <!-- menu__item_icon -->
+              <li class="menu__item">
                 <div class="menu__button" role="button">
-                  <img src="../../images/close.svg" alt="" class="popup__close popup__close_theme_light"> <!--menu__button_on-->
+                  <img src="<%=require('../../images/close.svg').default%>" alt="close" class="popup__close popup__close_theme_light">
                 </div>
               </li>
             </ul>
@@ -197,7 +198,7 @@
         <nav class="menu">
           <ul class="menu__layout">
             <li class="menu__item">
-              <a class="menu__button menu__button_on" target="_self" href="../index.html" role="button">
+              <a class="menu__button menu__button_on" target="_self" href="./index.html" role="button">
                 <span class="button__text button__text_footer">Главная</span>
               </a>
               <a class="menu__button menu__button_on" target="_blank" href="https://praktikum.yandex.ru/" role="button">
@@ -206,10 +207,10 @@
             </li>
             <li class="menu__icon">
               <a target="_blank" href="https://github.com/Xyroprot">
-                <img src="../../images/github.svg" alt="">
+                <img src="<%=require('../../images/github.svg').default%>" alt="GH">
               </a>
               <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
-                <img src="../../images/facebook.svg" alt="">
+                <img src="<%=require('../../images/facebook.svg').default%>" alt="FB">
               </a>
             </li>
           </ul>
@@ -217,28 +218,27 @@
       </div>
     </footer>
 
-    <div class="popup "> <!-- всплывающее меню (добавить модификатор popup_is-opened)-->
+    <div class="popup "> <!-- всплывающее меню (добавить модификатор popup_is-opened); для замены иконки меню на "X" и окраски header в цвет всплывающего меню необходимо осуществтить замену модификаторов в секции header согласно комментариям-->
       <div class="popup__menu popup__menu_theme_light">
         <nav class="menu">
           <ul class="menu__column-layout"> <!--menu__layout-->
             <li class="menu__item">
-              <a class="menu__button menu__button_on" target="_self" href="../index.html" role="button">
+              <a class="menu__button menu__button_on" target="_self" href="./index.html" role="button">
                 <span class="button__text button__text_header">Главная</span>
               </a>
-              <a class="menu__button menu__button_on" target="_self" href="./user-account.html" role="button">
+              <a class="menu__button menu__button_on" target="_self" href="./user-account/user-account.html" role="button">
                 <span class="button__text button__text_header">Сохраненные статьи</span>
               </a>
             </li>
             <li class="menu__item">
-              <a class="menu__button menu__button_on menu__button_sign" target="_self" href="../index.html" role="button">
-                <span class="button__text button__text_section">Грета <img src="../../images/union.svg" alt=""> </span>
+              <a class="menu__button menu__button_on menu__button_sign" target="_self" href="./index.html" role="button">
+                <span class="button__text button__text_section">Грета <img src="<%=require('../../images/union.svg').default%>" alt="-->"> </span>
               </a>
             </li>
           </ul>
         </nav>
       </div>
     </div>
-
   </div>
 </body>
 </html>

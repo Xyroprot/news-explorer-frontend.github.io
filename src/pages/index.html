@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsExplorer</title>
-  <link rel="stylesheet" href="./index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Новости по запросу">
   <meta name="Author" content="Владимир Дьяконов">
-  <link rel="icon" type="image/png" href="../images/favicon/favicon.png">
+  <link rel="icon" type="image/png" href="<%=require('../images/favicon.png').default%>">
 </head>
 <body>
   <div class="root">
@@ -19,11 +18,12 @@
           <span class="header__logo">NewsExplorer</span>
           <nav class="menu">
             <ul class="menu__layout">
+              <!--активация кнопок осуществляется добавлением модификатора menu__button_on-->
               <li class="menu__item menu__item_header">
-                <a class="menu__button menu__button_underlined menu__button_on " target="_self" href="./index.html" role="button">
+                <a class="menu__button menu__button_underlined menu__button_on" target="_self" href="./index.html" role="button">
                   <span class="button__text button__text_header">Главная</span>
                 </a>
-                <a class="menu__button menu__button_on" target="_self" href="./user-account/user-account.html" role="button">
+                <a class="menu__button menu__button_on" target="_self" href="./user-account.html" role="button">
                   <span class="button__text button__text_header">Сохраненные статьи</span>
                 </a>
               </li>
@@ -34,17 +34,18 @@
               </li>
               <li class="menu__item menu__item_header">
                 <a class="menu__button menu__button_sign" target="_self" href="./index.html" role="button">
-                  <span class="button__text button__text_header">Грета <img src="../images/union_white.svg" alt=""> </span>
+                  <span class="button__text button__text_header">Грета <img src="<%=require('../images/union_white.svg').default%>" alt="-->"> </span>
                 </a>
+              </li>
+              <!--активация иконок на разрешении ниже 670px осуществляется добавлением модификатора menu__item_icon-->
+              <li class="menu__item menu__item_icon">
+                <div class="menu__button" role="button">
+                  <img src="<%=require('../images/menu_mobile.svg').default%>" alt="menu">
+                </div>
               </li>
               <li class="menu__item ">
                 <div class="menu__button" role="button">
-                  <img src="../images/menu_mobile.svg" alt="">
-                </div>
-              </li>
-              <li class="menu__item menu__item_icon"> <!-- menu__item_icon -->
-                <div class="menu__button" role="button">
-                  <img src="../images/close.svg" alt="" class="popup__close"> <!--menu__button_on-->
+                  <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
                 </div>
               </li>
             </ul>
@@ -68,7 +69,7 @@
 
     <section class="places-list places-list_on"> <!--секция со статьями; places-list_on - активация секции-->
 
-      <!--загрузка статей; places-list__processing_on - активация секции-->
+      <!--загрузка статей; places-list__processing_on - активация подсекции-->
       <section class="places-list__processing root__section">
         <div class="places-list__handler">
           <i class="circle-preloader"></i>
@@ -78,9 +79,9 @@
         </div>
       </section>
 
-      <!--отчет об ошибке; places-list__error_on - активация секции-->
+      <!--отчет об ошибке; places-list__error_on - активация подсекции-->
       <section class="places-list__error root__section">
-        <img src="../images/not-found.png" alt="" class="places-list__not-found">
+        <img src="<%=require('../images/not-found.png').default%>" alt="articles not-found" class="places-list__not-found">
         <div class="places-list__title places-list__title_error">
           <h2 class="section__title section__title_response">Ничего не найдено</h2>
         </div>
@@ -89,7 +90,7 @@
         </div>
       </section>
 
-      <!--выдача статей; places-list__response_on - активация секции-->
+      <!--выдача статей; places-list__response_on - активация подсекции-->
       <section class="places-list__response places-list__response_on root__section">
         <div class="places-list__title places-list__title_response">
           <h2 class="section__title">Результаты поиска</h2>
@@ -201,10 +202,10 @@
             </li>
             <li class="menu__icon">
               <a target="_blank" href="https://github.com/Xyroprot">
-                <img src="../images/github.svg" alt="">
+                <img src="<%=require('../images/github.svg').default%>" alt="GH">
               </a>
               <a target="_blank" href="https://www.facebook.com/yandex.praktikum">
-                <img src="../images/facebook.svg" alt="">
+                <img src="<%=require('../images/facebook.svg').default%>" alt="FB">
               </a>
             </li>
           </ul>
@@ -214,7 +215,7 @@
 
     <div class="popup"> <!--всплывающее окно входа (добавить модификатор popup_is-opened)-->
       <div class="popup__content">
-        <img src="../images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('../images/close.svg').default%>" alt="X" class="popup__close">
         <h3 class="popup__title">Вход</h3>
         <form class="popup__form" name="sign-in">
 
@@ -240,7 +241,7 @@
 
     <div class="popup"> <!--всплывающее окно регистрации (добавить модификатор popup_is-opened)-->
       <div class="popup__content">
-        <img src="../images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('../images/close.svg').default%>" alt="X" class="popup__close">
         <h3 class="popup__title">Регистрация</h3>
         <form class="popup__form" name="sign-up">
 
@@ -272,13 +273,13 @@
 
     <div class="popup"> <!--всплывающее окно регистрации (добавить модификатор popup_is-opened)-->
       <div class="popup__content">
-        <img src="../images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('../images/close.svg').default%>" alt="X" class="popup__close">
         <h3 class="popup__title popup__title_signed">Пользователь успешно зарегистрирован!</h3>
         <p class="popup__text"><span class="popup__text_link">Выполнить вход</span></p>
       </div>
     </div>
 
-    <div class="popup"> <!-- всплывающее меню (добавить модификатор popup_is-opened)-->
+    <div class="popup"> <!-- всплывающее меню (добавить модификатор popup_is-opened); для замены иконки меню на "X" и окраски header в цвет всплывающего меню необходимо осуществтить замену модификаторов в секции header согласно комментариям-->
       <div class="popup__menu popup__menu_theme_dark">
         <nav class="menu">
           <ul class="menu__column-layout"> <!--menu__layout-->
@@ -286,7 +287,7 @@
               <a class="menu__button menu__button_on" target="_self" href="./index.html" role="button">
                 <span class="button__text button__text_header">Главная</span>
               </a>
-              <a class="menu__button menu__button_on" target="_self" href="./user-account/user-account.html" role="button">
+              <a class="menu__button menu__button_on" target="_self" href="./user-account.html" role="button">
                 <span class="button__text button__text_header">Сохраненные статьи</span>
               </a>
             </li>
@@ -297,7 +298,7 @@
             </li>
             <li class="menu__item menu__item_header">
               <a class="menu__button menu__button_sign" target="_self" href="./index.html" role="button">
-                <span class="button__text button__text_section">Грета <img src="../images/union_white.svg" alt=""> </span>
+                <span class="button__text button__text_section">Грета <img src="<%=require('../images/union_white.svg').default%>" alt="-->"> </span>
               </a>
             </li>
           </ul>
@@ -307,8 +308,3 @@
   </div>
 </body>
 </html>
-<!--
-  <script src="./index.js"></script>
-
-  <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-  -->
