@@ -7,12 +7,12 @@ export default class MainApi {
 
   // регистрирует нового пользователя;
   signup(payload) {
-    return this._request('/signup', 'POST', this.config.headers, payload);
+    return this._request('/signup', 'POST', this.config.HEADERS, payload);
   }
 
   // аутентифицирует пользователя на основе почты и пароля;
   signin(payload) {
-    return this._request('/signin', 'POST', this.config.headers, payload);
+    return this._request('/signin', 'POST', this.config.HEADERS, payload);
   }
 
   // возвращает информацию о пользователе;
@@ -27,16 +27,16 @@ export default class MainApi {
 
   // создаёт статью;
   createArticle(payload) {
-    return this._request('/articles', 'POST', this.config.headers, payload);
+    return this._request('/articles', 'POST', this.config.HEADERS, payload);
   }
 
   // удаляет статью:
   removeArticle(articleId) {
-    return this._request(`/articles/:${articleId}`, 'DELETE', this.config.headers);
+    return this._request(`/articles/:${articleId}`, 'DELETE', this.config.HEADERS);
   }
 
   _request(url, method, header, payload) { // модель запроса
-    return fetch(this.config.baseUrl + url, {
+    return fetch(this.config.BASE_URL + url, {
       method,
       credentials: 'include',
       headers: method !== 'GET' ? header : undefined,

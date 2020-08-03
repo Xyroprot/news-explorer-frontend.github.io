@@ -51,7 +51,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      API_URL: JSON.stringify(process.env.API_URL),
     }),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new OptimizeCssAssetsPlugin({
