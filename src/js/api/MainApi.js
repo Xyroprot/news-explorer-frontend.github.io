@@ -38,19 +38,19 @@ export default class MainApi {
   _request(url, method, header, payload) { // модель запроса
     return fetch(this.config.BASE_URL + url, {
       method,
-      credentials: 'include',
-      headers: method !== 'GET' ? header : undefined,
+      credentials: method === 'GET' ? 'include' : 'same-origin',
+      headers: header,
       body: payload ? JSON.stringify(payload) : undefined,
     })
       .then((res) => {
-        if (res.ok) {
+        console.log(res.ok && res.headers.get('Content-Length') < 1);
+        if (res.ok && res.headers.get('Content-Length') < 1) {
+          return res;
+        }
+        if (res.ok && res.headers.get('Content-Length') > 1) {
           return res.json();
         }
-        return Promise.reject(res.status);
-      })
-      .then((data) => data)
-      .catch((error) => {
-        console.error(error);
+        return Promise.reject(res.json());
       });
   }
 }

@@ -3,13 +3,21 @@
 .error {
   display: none;
   position: absolute;
-  top: 55px;
 }
 
-.error:nth-of-type(2) {
-  top: 140px;
+.error:nth-last-of-type(1) {
+  bottom: 100px;
+  align-self: center;
 }
 
-.error:nth-of-type(3) {
-  top: 225px;
+.error:nth-last-of-type(2) {
+  bottom: 115px;
+}
+
+.error:nth-last-of-type(3) {
+  bottom: 200px;
+}
+
+.error:nth-last-of-type(4) {
+  bottom: 285px;
 }

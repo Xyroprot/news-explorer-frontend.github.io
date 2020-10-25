@@ -1,5 +1,21 @@
 .button__popup {
-  background-color: #E6E8EB;
   border-radius: 100px;
   margin-bottom: 16px;
+  background-color: #E6E8EB;
+  color: #B6BCBF;
+  transition: all .3s ease-in-out;
 }
+
+.button__popup:valid {
+  background-color: #2F71E5;
+  color: #FFFFFF;
+}
+
+.button__popup:valid:hover {
+  background: #347EFF;
+}
+
+.button__popup:valid:focus {
+  background: #2A65CC;
+}
+

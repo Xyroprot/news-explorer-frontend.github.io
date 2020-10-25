@@ -1,6 +1,6 @@
 @import url(./__text/button__text.css);
 @import url(./__popup/button__popup.css);
-@import url(./_search/button_search.css);
+@import url(./__search/button__search.css);
 
 .button {
   height: 64px;

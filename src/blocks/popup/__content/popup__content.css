@@ -1,3 +1,5 @@
+@import url(./_is-opened/popup__content_is-opened.css);
+
 .popup__content {
   width: 430px;
   background-color: #FFFFFF;
@@ -5,7 +7,7 @@
   border-radius: 16px;
   position: relative;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 34px 36px 28px;
 }

@@ -16,7 +16,6 @@
   align-items: center;
   justify-content: center;
   display: none;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 670px) {
