@@ -1,4 +1,7 @@
+@import url('./_on/places-list__button_on.css');
+
 .places-list__button {
+  display: none;
   width: 288px;
   background: #FFFFFF;
   border-radius: 80px;

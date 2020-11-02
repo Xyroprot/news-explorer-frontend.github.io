@@ -1,0 +1,14 @@
+.error.error_search {
+  position: relative;
+}
+
+.error.error_search:nth-last-of-type(1) {
+  bottom: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+  .error.error_search:nth-last-of-type(1) {
+    right: 0px;
+  }
+}

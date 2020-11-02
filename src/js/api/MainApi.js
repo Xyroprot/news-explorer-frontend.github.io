@@ -37,9 +37,9 @@ export default class MainApi {
 
   _request(url, method, header, payload) { // модель запроса
     return fetch(this.config.BASE_URL + url, {
-      method,
-      credentials: method === 'GET' ? 'include' : 'same-origin',
       headers: header,
+      credentials: 'include',
+      method,
       body: payload ? JSON.stringify(payload) : undefined,
     })
       .then((res) => {
@@ -51,6 +51,10 @@ export default class MainApi {
           return res.json();
         }
         return Promise.reject(res.json());
+      })
+      .then((data) => data)
+      .catch((err) => {
+        throw err;
       });
   }
 }

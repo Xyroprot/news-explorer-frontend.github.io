@@ -10,14 +10,13 @@ export default class NewsApi {
   }
 
   // возвращает список новостей на основе запроса.
-  getNews(payload) {
-    return this._request(`?q=${payload}&apiKey=${this.config.HEADERS.authorization}&from=${TODAY_ISO}&to=${SEVEN_DAYS_ISO}&pageSize=100`, this.config.HEADERS, payload);
+  getNews(keyword) {
+    return this._request(`?q=${keyword}&apiKey=${this.config.HEADERS.authorization}&from=${SEVEN_DAYS_ISO}&to=${TODAY_ISO}&pageSize=100`, this.config.HEADERS);
   }
 
-  _request(url, header, payload) { // модель запроса
+  _request(url, header) { // модель запроса
     return fetch(this.config.BASE_URL + url, {
       headers: header,
-      body: payload ? JSON.stringify(payload) : undefined,
     })
       .then((res) => {
         if (res.ok) {
@@ -27,7 +26,7 @@ export default class NewsApi {
       })
       .then((data) => data)
       .catch((error) => {
-        console.error(error);
+        throw error;
       });
   }
 }

@@ -13,7 +13,7 @@ export default class Form extends BaseComponent {
     super();
     this.api = api;
     this.form = form;
-    this.button = form.querySelector('.button__popup');
+    this.button = form.querySelector('.button');
     this.handlerElements = [
       { element: this.form, event: 'input', callBack: this._validateForm },
     ];
@@ -41,7 +41,7 @@ export default class Form extends BaseComponent {
   // валидирует переданный в качестве аргумента инпут;
   _validateInputElement(event) {
     this.inputElement = event.target;
-    this.errorElement = event.target.nextElementSibling.querySelector('.popup__text_error');
+    this.errorElement = event.target.nextElementSibling.querySelector('.popup__text');
     if (this.inputElement.validity.typeMismatch) {
       this.errorElement.textContent = INVALID_MAIL_FORMAT;
       return this.errorElement.textContent;

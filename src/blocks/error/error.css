@@ -1,7 +1,7 @@
-@import url(./_on/error_on.css);
+@import url('./_search/error_search.css');
 
 .error {
-  display: none;
+  display: flex;
   position: absolute;
 }
 
