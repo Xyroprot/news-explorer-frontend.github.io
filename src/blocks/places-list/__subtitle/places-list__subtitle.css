@@ -1,4 +1,22 @@
 .places-list__subtitle {
-  width: 80%;
+  width: 180%;
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .places-list__subtitle {
+    width: 160%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .places-list__subtitle {
+    width: 110%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .places-list__subtitle {
+    width: 100%;
+  }
 }

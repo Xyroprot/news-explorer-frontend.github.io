@@ -6,6 +6,7 @@
   color: #FFFFFF;
   width: calc(42%);
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;

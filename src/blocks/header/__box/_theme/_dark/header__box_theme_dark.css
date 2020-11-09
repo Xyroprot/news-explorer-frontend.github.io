@@ -3,3 +3,9 @@
   background-color: rgba(196, 196, 196, 0.01);
   color: #FFFFFF;
 }
+
+@media screen and (max-width: 400px) {
+  .header__box_theme_dark {
+    background-color: #1A1B22;
+  }
+}

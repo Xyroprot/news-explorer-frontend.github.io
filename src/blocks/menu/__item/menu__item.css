@@ -1,5 +1,6 @@
 .menu__item {
   display: flex;
+  cursor: pointer;
 }
 
 .menu__item:first-of-type {

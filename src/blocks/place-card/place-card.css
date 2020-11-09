@@ -12,6 +12,7 @@
 
 .place-card {
   display: flex;
+  width: 100%;
   background-color: #FFFFFF;
   border-radius: 20px;
 }

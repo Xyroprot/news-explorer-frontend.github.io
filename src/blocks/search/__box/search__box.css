@@ -1,6 +1,8 @@
 .search__box {
   display: flex;
   align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 65%;
   height: 29%;
   margin-left: 4%;
