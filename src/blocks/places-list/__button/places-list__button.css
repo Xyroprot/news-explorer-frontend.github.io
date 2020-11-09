@@ -2,6 +2,8 @@
 
 .places-list__button {
   display: none;
+  flex-direction: column;
+  justify-content: center;
   width: 288px;
   background: #FFFFFF;
   border-radius: 80px;

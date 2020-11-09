@@ -109,7 +109,7 @@
 
     </section>
 
-    <section class="profile root__section"> <!--секция информации о пользователе-->
+    <section class="profile root__section"> <!--секция информации об авторе проекта-->
       <div class="user-info">
         <div class="user-info__photo"></div>
         <div class="user-info__data">
@@ -208,7 +208,7 @@
       </div>
 
       <p class="popup__text popup__text_field-name">Имя</p>
-      <input type="text" minlength="2" maxlength="30" name="login" class="input input_type_popup" placeholder="Введите свое имя" required>
+      <input type="text" minlength="2" maxlength="10" name="login" class="input input_type_popup" placeholder="Введите свое имя" required>
       <div class="error">
         <span class="popup__text popup__text_error"></span>
       </div>
@@ -261,8 +261,11 @@
   <template class="template__card">
     <article class="place-card">
       <div class="place-card__item">
+        <div class="place-card__icon place-card__icon_tag">
+          <p class="place-card__info place-card__info_category"></p>
+        </div>
         <div class="place-card__controls">
-          <button class="place-card__icon place-card__icon_bookmark"></button>
+          <button class="place-card__icon place-card__icon_bookmark icon_toggle" disabled></button>
           <div class="place-card__icon place-card__icon_notification">
             <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
           </div>
@@ -284,26 +287,6 @@
 </html>
 
 <!--
-<article class="place-card">
-  <div class="place-card__item">
-    <div class="place-card__controls">
-      <button class="place-card__icon place-card__icon_bookmark"></button>
-      <div class="place-card__icon place-card__icon_notification">
-        <p class="place-card__info place-card__info_hint">Войдите, чтобы сохранять статьи</p>
-      </div>
-    </div>
-    <a class="place-card__preview" href="https://stampsy.com/na-elektrichkakh-do-baikala" target="_blank">
-      <div class="place-card__image"></div>
-      <div class="place-card__report">
-        <p class="place-card__date">2 августа, 2019</p>
-        <h3 class="place-card__title">Национальное достояние – парки</h3>
-        <p class="place-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-        <p class="place-card__source">Лента.ру</p>
-      </div>
-    </a>
-  </div>
-</article>
-
 <article class="place-card">
   <div class="place-card__item">
     <div class="place-card__icon place-card__icon_tag">

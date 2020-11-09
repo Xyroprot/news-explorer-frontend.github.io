@@ -7,14 +7,13 @@
   padding: 11px 13px;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .place-card__icon_bookmark:hover {
   background-image: url(../../../../images/bookmark-hover.svg);
 }
 
-.place-card__icon_bookmark:focus {
+.place-card__icon_bookmark.place-card__icon_bookmark_marked {
   background-image: url(../../../../images/bookmark-marked.svg);
-  outline: none;
 }
-

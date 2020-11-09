@@ -63,9 +63,9 @@ export default class Popup extends BaseComponent {
       || event.target.classList.contains('popup')
       || event.target.classList.contains('popup__close')
     ) {
+      this._setHandlers(this.handlerElements);
       this.clearContent(this.popup.querySelector('.content_is-opened'));
       this.popup.classList.remove('popup_is-opened');
-      this._setHandlers(this.handlerElements);
     }
   }
 }

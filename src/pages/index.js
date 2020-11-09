@@ -18,8 +18,6 @@ import configMain from '../js/constants/config-main-api';
 import configNews from '../js/constants/config-news-api';
 import errorMessages from '../js/constants/error-messages';
 
-import dateFormat from '../js/utils/dateFormat';
-
 const {
   REQUIRED_KEYWORD,
 } = errorMessages;
@@ -28,7 +26,8 @@ const headerBox = document.querySelector('.header__box');
 const popupElement = document.querySelector('.popup');
 const newsCardSection = document.querySelector('.places-list');
 
-const loginButton = document.querySelector('.menu__item_header-login');
+const loginButton = document.querySelector('.auth');
+const logoutButton = document.querySelector('.user');
 
 const tmplLogin = document.querySelector('.template__popup_sign-in');
 const tmplSignup = document.querySelector('.template__popup_sign-up');
@@ -85,8 +84,7 @@ const Signup = (event) => {
 };
 
 // аутентификация пользователя на основе почты и пароля
-const Login = (event) => {
-  event.preventDefault();
+const Login = () => {
   const payload = {
     email: cntLogin.elements.email.value,
     password: cntLogin.elements.password.value,
@@ -97,7 +95,7 @@ const Login = (event) => {
       formLogin.setServerError();
       return popupElement.classList.remove('popup_is-opened');
     })
-    .then(() => HeaderStyle(event))
+    .then(() => HeaderStyle(), newsCard.renderIcon())
     .catch((err) => {
       err
         .then((data) => formLogin.setServerError(data.message));
@@ -105,12 +103,21 @@ const Login = (event) => {
     });
 };
 
-// отображение полученных объектов статей в виде карточек
-const CardRender = (data, request) => {
+// выход авторизованного пользователя
+const Logout = (event) => {
+  event.preventDefault();
 
+  mainApi.signOut()
+    .catch((err) => {
+      indexHeader.render({
+        isLoggedIn: false,
+      });
+      newsCard.renderIcon();
+      console.error(err);
+    });
 };
 
-// обработка поискового запроса с использованием NewsApi
+// обработка и выдача поискового запроса
 const Search = (event) => {
   event.preventDefault();
   const request = {
@@ -124,20 +131,10 @@ const Search = (event) => {
   return newsApi.getNews(request.keyword)
     .then((data) => {
       if (data.totalResults === 0) {
-        newsCardList.renderError({ noResult: true });
+        return newsCardList.renderError({ noResult: true });
       }
-      data.articles.forEach((item) => {
-        const content = {
-          keyword: request.keyword,
-          title: item.title,
-          text: item.description,
-          date: dateFormat(item.publishedAt),
-          source: item.source.name,
-          link: item.url,
-          image: item.urlToImage,
-        };
-        newsCardList.addCard(content);
-      });
+      newsCardList.showMore(false);
+      return newsCardList.addCard(data.articles, request.keyword);
     })
     .catch((error) => {
       if (error.message === 'Failed to fetch') {
@@ -157,5 +154,8 @@ const openPopup = () => {
   popup.open();
 };
 
-loginButton.addEventListener('click', openPopup);
+HeaderStyle();
 indexHeader.setStyle();
+newsCard.renderIcon();
+loginButton.addEventListener('click', openPopup);
+logoutButton.addEventListener('click', Logout);

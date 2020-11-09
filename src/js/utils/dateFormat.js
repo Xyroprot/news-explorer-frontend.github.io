@@ -7,7 +7,7 @@ const dateFormat = (publishedAt) => {
     day: 'numeric',
   };
   const localDate = shortenedDate.toLocaleString('ru', options);
-  const formattedDate = `${localDate.substr(0, 10)}, ${localDate.substr(11, 4)}`;
+  const formattedDate = `${localDate.substr(0, localDate.length - 8)},${localDate.substr(-8, 5)}`;
   return formattedDate;
 };
 

@@ -15,6 +15,11 @@ export default class MainApi {
     return this._request('/signin', 'POST', this.config.HEADERS, payload);
   }
 
+  // позволяет выйти пользователю из системы
+  signOut() {
+    return this._request('/users/', 'GET');
+  }
+
   // возвращает информацию о пользователе;
   getUserData() {
     return this._request('/users/me', 'GET');
@@ -32,7 +37,7 @@ export default class MainApi {
 
   // удаляет статью:
   removeArticle(articleId) {
-    return this._request(`/articles/:${articleId}`, 'DELETE', this.config.HEADERS);
+    return this._request(`/articles/${articleId}`, 'DELETE', this.config.HEADERS);
   }
 
   _request(url, method, header, payload) { // модель запроса
@@ -43,7 +48,6 @@ export default class MainApi {
       body: payload ? JSON.stringify(payload) : undefined,
     })
       .then((res) => {
-        console.log(res.ok && res.headers.get('Content-Length') < 1);
         if (res.ok && res.headers.get('Content-Length') < 1) {
           return res;
         }
